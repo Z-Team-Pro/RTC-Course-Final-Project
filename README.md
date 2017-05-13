@@ -13,7 +13,8 @@ How to prepare the development Environment for RTC-Blogger Project
   * Go to [Mongodb](https://www.mongodb.com/download-center?jmp=nav#community)
   * Install Mongo in Your OS 
   * For ubuntu users check for Installtion  here [Install Mongo on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04) 
-**3. Install Parse Server **
+  
+**3. Install Parse Server**
   * open Node Commends Line from your terminal or node console From Windows
   * Navigate to  The Repository folder/parse-server
   * Run `npm install`
