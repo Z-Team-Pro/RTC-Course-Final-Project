@@ -25,7 +25,7 @@ if(isset($args["User_ID"])){
 
     
 }
-else{
+else {
     $query = new $this->ParseQuery("Posts");
     $results = $query->find();
     // var_dump($results);
