@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "serverURL": "http://localhost:1337/parse",
+      "appId": "RTC_BLogger",
+      "masterKey": " MASTER71110",
+      "appName": "RTC_Blogger"
+    }
+  ]
+}
