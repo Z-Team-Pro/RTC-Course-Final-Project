@@ -4,8 +4,8 @@
 
 //Parse server app variabels 
 
-   $app_id='RTC_BLogger'; // The ID of the the parse app
-   $master_key='MASTER71110';  //The Master Key of the app
+   $app_id='RTC_Blogger'; // The ID of the the parse app
+   $master_key='Master71110';  //The Master Key of the app
    $Server_URL='http://localhost:1337'; //Server URL of the parse Server
 
 //Remote pasre server Configration
