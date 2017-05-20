@@ -1,3 +1,4 @@
+import { SignUpService } from './Services/Signup.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -22,7 +23,7 @@ import { RouterModule } from '@angular/router';
     HttpModule,
     RouterModule.forRoot(rootRouterConfig)
   ],
-  providers: [],
+  providers: [ SignUpService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
