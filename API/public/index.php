@@ -32,8 +32,6 @@ require __DIR__ . '/../MasterAPI/SignUp.php';
 require __DIR__ . '/../MasterAPI/AddPost.php';
 require __DIR__ . '/../MasterAPI/LoadPosts.php';
 
-
-
 // Run app
 $app->run();
 
