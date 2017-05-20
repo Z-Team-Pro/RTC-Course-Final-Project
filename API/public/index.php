@@ -21,12 +21,16 @@ $app = new \Slim\App($settings);
 require __DIR__ . '/../src/dependencies.php';
 
 // Register middleware
-require __DIR__ . '/../src/middleware.php';
+//require __DIR__ . '/../src/middleware.php';
 
 // Register routes
-require __DIR__ . '/../src/routes.php';
 
-require __DIR__ . '/../MasterAPI/Test.php';
+
+//require __DIR__ . '/../MasterAPI/Test.php';
+require __DIR__ . '/../MasterAPI/Login.php';
+require __DIR__ . '/../MasterAPI/SignUp.php';
+require __DIR__ . '/../MasterAPI/AddPost.php';
+require __DIR__ . '/../MasterAPI/LoadPosts.php';
 
 
 
