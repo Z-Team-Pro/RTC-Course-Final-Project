@@ -70,7 +70,7 @@ return $res->withJson($AddUser->getObjectId(),200);
 }
 catch(ParseExection $e ){
 
-return $res->withJson(" الدنيا اتعكت "->getObjectId(),200);
+return $res->withJson(" الدنيا اتعكت ",200);
 
 
 
