@@ -34,7 +34,7 @@ else{
 }
    
 //localdev
-      $PhotoURL="http://localhost:8080/public/Photos/$name";
+      $PhotoURL="http://localhost:8080/API/public/Photos/$name";
    
   //return $res->withJson($photoURL,200);
 
