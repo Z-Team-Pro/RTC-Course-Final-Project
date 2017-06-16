@@ -1,9 +1,35 @@
 <?php
 
-use \Firebase\JWT\JWT;
-use \Slim\Middleware\HttpBasicAuthentication\AuthenticatorInterface;
+//use \Firebase\JWT\JWT;
+//use \Slim\Middleware\HttpBasicAuthentication\AuthenticatorInterface;
 
 require '../vendor/autoload.php';
+
+
+$app->add(function ($req, $res, $next) {
+    $response = $next($req, $res);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+});
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
 
 $app = new \Slim\App;
 
@@ -24,6 +50,14 @@ else{
     }
     
 }}
+
+
+
+
+
+
+
+
 
 
 $app->add(new \Slim\Middleware\HttpBasicAuthentication([
@@ -67,3 +101,5 @@ $app->add(new \Slim\Middleware\JwtAuthentication([
             ->write(json_encode($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
     }
 ]));
+
+*/

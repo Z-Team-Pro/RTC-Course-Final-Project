@@ -10,20 +10,18 @@ export class SignUpService {
 
 constructor(private http: Http){
 
-
-
-
 }
 
 
 SignUp( Name:string, Phone:string ,Email: string ,Date:string,Avatar:any,Password:string){
+console.log("name here");
 
-
+console.log(Name);
 var data= new FormData;
 data.append("Name",Name);
 data.append("Email",Email);
 data.append("Password",Password);
-data.append("photo",Avatar);
+//data.append("photo",Avatar);
 data.append("Phone",Phone);
 data.append("date-of-birth",Date);
 

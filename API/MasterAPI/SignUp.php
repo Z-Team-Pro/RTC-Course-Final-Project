@@ -2,21 +2,28 @@
 
 $app->post('/RTC_Blogger/SignUp',function ($req,$res){
 
-$data= $req->getParsedBody();
 
 
-$Name=$data['Name'];
-$Password=$data['Password'];
-$Phone=$data['Phone'];
-$Email=$data['Email'];
-$date=$data['date-of-birth'];
+
+$Name= $req->getParsedBodyParam("Name");
+
+$Password=$req->getParsedBodyParam("Password");
+$Phone=$req->getParsedBodyParam("Phone");
+$Email=$req->getParsedBodyParam("Email");
+$date=$req->getParsedBodyParam("date-of-birth");
 //get Data from user 
 
 $files=$req->getUploadedFiles();
 $newimage=$files['photo'];
 
+$this->logger->info($Name." ".$Password." ".$Phone." ".$Email." ".$date);
+
+/*
 
 if ($newimage->getError() === UPLOAD_ERR_OK) {
+
+$this->logger->info("image");
+
     $uploadFileName = $newimage->getClientFilename();
            $type=$newimage->getClientMediaType();
             $name = uniqid('img-'.date('Ymd').'-');
@@ -42,9 +49,7 @@ else{
 
 
 }
-
-
-
+*/
 try {
 
 
@@ -56,7 +61,7 @@ $AddUser->set('Password',$Password);
 $AddUser->set('Date_of_Birth',$date);
 $AddUser->set('Phone',$Phone);
 $AddUser->set('Email',$Email);
-$AddUser->set('Avatar',$photoURL);
+//$AddUser->set('Avatar',$photoURL);
 $AddUser->save();
 
 

@@ -29,6 +29,7 @@ console.log(this.Name);
 
 }
   signup(){
+console.log(this.Name);
 
 this.adduser.SignUp(this.Name,this.Phone,this.Email,this.Date,this.Avatar,this.Password).subscribe(
 result=>{ console.log(result)},

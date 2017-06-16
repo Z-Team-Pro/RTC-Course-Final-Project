@@ -36,17 +36,17 @@
   <div class="register-box-body" style="background-color: black;">
     <p class="login-box-msg">Register a new membership</p>
 
-    <form action="../../index.html" method="post">
+    
       <div class="form-group has-feedback">
-        <input type="text" class="form-control"  [ngModel]="Name" name="Name" placeholder="Full name">
+        <input type="text" class="form-control"  [(ngModel)]="Name"  placeholder="Full name">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" [ngModel]="Email" placeholder="Email">
+        <input type="email" class="form-control" name="email" [(ngModel)]="Email" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control"[ngModel]="Password" name="password" placeholder="Password">
+        <input type="password" class="form-control"[(ngModel)]="Password" name="password" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -56,16 +56,16 @@
 
 
  <div class="form-group has-feedback">
-        <input type="text" class="form-control" [ngModel]="Phone" placeholder="phone" name="Phone">
+        <input type="text" class="form-control" [(ngModel)]="Phone" placeholder="phone" name="Phone">
       </div>
 
        <div class="form-group has-feedback">
-        <input type="text" class="form-control" [ngModel]="Date" placeholder="date of birth " name="date-of-birth">
+        <input type="text" class="form-control" [(ngModel)]="Date" placeholder="date of birth " name="date-of-birth">
         <span class="fa fa-birthDay"></span>
       </div>
 
 <div class="form-group has-feedback">
-        <input type="file" class="form-control" placeholder="Avatar" [ngModel]="Avatar" name="Avatar">
+        <input type="file" class="form-control" placeholder="Avatar" [(ngModel)]="Avatar" name="Avatar">
         <span class="fa fa-file"></span>
       </div>
 
@@ -77,11 +77,11 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" (click)="singup()" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button type="submit" (click)="signup()" class="btn btn-primary btn-block btn-flat">Register</button>
         </div>
         <!-- /.col -->
       </div>
-    </form>
+    
 
     <div class="social-auth-links text-center">
     
