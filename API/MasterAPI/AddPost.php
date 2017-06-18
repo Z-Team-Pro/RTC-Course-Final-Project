@@ -1,19 +1,21 @@
 <?php
 
-$app->post('/RTC_Blogger/AddPost',function ($req,$res){
+$app->post('/RTC_Blogger/AddPost',function ($req,$res,$args){
 
 $data= $req->getParsedBody();
-$Post_Title = $data["Post_Title"];
+
+
+
+
+$Post_Title = $data["Title"];
 $Body = $data["Body"];
-$Likes = intval($data["Likes"]);
-
-
-
-
+$id=$data["id"];
+//$Likes = intval($data["Likes"]);
+var_dump($data);
 $files=$req->getUploadedFiles();
-$newimage=$files['Photo'];
+//$newimage=$files['Photo'];
 
-
+/*
 if ($newimage->getError() === UPLOAD_ERR_OK) {
     $uploadFileName = $newimage->getClientFilename();
            $type=$newimage->getClientMediaType();
@@ -40,17 +42,25 @@ else{
 
 
 }
-
+*/
 
 // create new object Posts
 
 try{
-    $addpost = new $this->ParseObject("Posts");
 
-    $addpost->set("Post_Title",$Post_Title);
-    $addpost->set("Body",$Body);
-    $addpost->set("Photo",$PhotoURL);
-    $addpost->set("Likes",$Likes);
+
+
+
+
+
+   $addpost = new $this->ParseObject("Posts");
+
+   $addpost->set("Title",$Post_Title);
+   $addpost->set("Body",$Body);
+   $addpost->set("User",$User);
+   
+   // $addpost->set("Photo",$PhotoURL);
+ //   $addpost->set("Likes",$Likes);
     $addpost->save();
     $message=array("objectid"=>$addpost->getObjectId(),"message"=>"Post Added");
     return $res->withJson($message,200);

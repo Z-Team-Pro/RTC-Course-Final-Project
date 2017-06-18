@@ -28,6 +28,8 @@ require __DIR__ . '/../src/middleware.php';
 
 //require __DIR__ . '/../MasterAPI/Test.php';
 require __DIR__ . '/../MasterAPI/Login.php';
+require __DIR__ . '/../MasterAPI/NewPost.php';
+
 require __DIR__ . '/../MasterAPI/SignUp.php';
 require __DIR__ . '/../MasterAPI/AddPost.php';
 require __DIR__ . '/../MasterAPI/LoadPosts.php';

@@ -18,10 +18,10 @@ $newimage=$files['photo'];
 
 $this->logger->info($Name." ".$Password." ".$Phone." ".$Email." ".$date);
 
-/*
+
 
 if ($newimage->getError() === UPLOAD_ERR_OK) {
-
+$this->logger->info("in if");
 $this->logger->info("image");
 
     $uploadFileName = $newimage->getClientFilename();
@@ -49,7 +49,7 @@ else{
 
 
 }
-*/
+
 try {
 
 
@@ -61,7 +61,7 @@ $AddUser->set('Password',$Password);
 $AddUser->set('Date_of_Birth',$date);
 $AddUser->set('Phone',$Phone);
 $AddUser->set('Email',$Email);
-//$AddUser->set('Avatar',$photoURL);
+$AddUser->set('Avatar',$photoURL);
 $AddUser->save();
 
 

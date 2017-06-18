@@ -1,4 +1,4 @@
-import { HttpModule  , Http} from '@angular/http';
+import { HttpModule  , Http, Response ,Headers, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import "rxjs/add/operator/map";
 @Injectable()
@@ -15,6 +15,15 @@ constructor(private http: Http){
 
 SignUp( Name:string, Phone:string ,Email: string ,Date:string,Avatar:any,Password:string){
 console.log("name here");
+
+
+// add authorization header with jwt token
+      //  let headers = new Headers({ 'Authorization': 'Bearer ' + localStorage.getItem('token') });
+        let headers = new Headers({ 'Content-Type': 'form-data' });
+
+
+        let options = new RequestOptions({ headers: headers });
+
 
 console.log(Name);
 var data= new FormData;

@@ -3,7 +3,7 @@
 //use \Firebase\JWT\JWT;
 //use \Slim\Middleware\HttpBasicAuthentication\AuthenticatorInterface;
 
-require '../vendor/autoload.php';
+//require '../vendor/autoload.php';
 
 
 $app->add(function ($req, $res, $next) {
